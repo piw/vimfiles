@@ -1,0 +1,1 @@
+A minimal Vim configuration.
