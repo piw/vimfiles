@@ -119,5 +119,10 @@ map <left>     :tabprev<enter>
 nmap S :%s//g<Left><Left>
 xmap S :s//g<Left><Left>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Plugin: Indent-Guides]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indent_guides_enable_on_vim_startup = 1
+
 
 " vim: set syntax=vim:
