@@ -37,9 +37,9 @@ call pathogen#helptags()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
-	let g:os = "Windows"
+        let g:os = "Windows"
     else
-	let g:os = substitute(system('uname'), '\n', '', '')
+        let g:os = substitute(system('uname'), '\n', '', '')
     endif
 endif
 
@@ -70,12 +70,13 @@ set background=dark
 
 if has("gui_running")
     set guioptions-=T
+    colorscheme base16-harmonic-dark
     if g:os == "Windows"
-	set guifont=Noto_Mono:h12
+        set guifont=Noto_Mono:h12
     elseif g:os == "Darwin"
-	set guifont=Noto\ Mono:h11
+        set guifont=Noto\ Mono:h11
     elseif g:os == "Linux"
-	set guifont=Noto\ Mono\ 10
+        set guifont=Noto\ Mono\ 10
     endif
 endif
 
