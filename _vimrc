@@ -119,6 +119,16 @@ map <left>     :tabprev<enter>
 nmap S :%s//g<Left><Left>
 xmap S :s//g<Left><Left>
 
+" Quickly escape to normal mode
+inoremap jj
+
+" Spell checking
+map <leader>ss :setlocal spell!<cr>  " toggle spell-checking
+map <leader>sn ]s  " move to next
+map <leader>sp [s  " move to last
+map <leader>sa zg  " add new word
+map <leader>s? z=  " suggest word
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Indent-Guides]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
