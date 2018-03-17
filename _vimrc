@@ -124,5 +124,19 @@ xmap S :s//g<Left><Left>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Plugin: Vimwiki]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let wiki_1 = {}
+if g:os == "Windows"
+    let wiki_1.path = 'd:\Dropbox\wiki'
+elseif g:os == "Darwin" || g:os == "Linux"
+    let wiki_1.path = '~/Dropbox/wiki'
+endif
+let g:vimwiki_list = [wiki_1]
+
+let g:vimwiki_folding = 'expr'
+let g:vimwiki_table_mappings = 0
+
 
 " vim: set syntax=vim:
