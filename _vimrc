@@ -120,7 +120,8 @@ nmap S :%s//g<Left><Left>
 xmap S :s//g<Left><Left>
 
 " Quickly escape to normal mode
-inoremap jj
+inoremap jj <Esc>
+inoremap jw <Esc>
 
 " Spell checking
 map <leader>ss :setlocal spell!<cr>  " toggle spell-checking
