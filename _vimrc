@@ -26,6 +26,9 @@
 "   rm -Rf .git/modules/bundle/vim-sensible
 "   git commit
 "
+" * Initialize submodules (on new machine)
+"   git submodule update --init --recursive (at root repo)
+"
 " # Recommended Font: Noto Mono
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
