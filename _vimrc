@@ -70,6 +70,7 @@ set relativenumber
 " [User Interface]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
+colorscheme default
 
 if has("gui_running")
     set guioptions-=T
