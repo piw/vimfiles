@@ -54,10 +54,10 @@ set nocompatible
 set nobackup
 set fileformats=unix,dos
 set fileformat=unix
-set textwidth=96
+set textwidth=88
 set linebreak
 set wrap
-set wrapmargin=96
+set wrapmargin=88
 set nolist
 set tabstop=4
 set shiftwidth=4
@@ -146,21 +146,21 @@ let wiki_todo = {}
 if g:os == "Windows"
     let wiki_todo.path = 'd:\Dropbox\wiki\TODO'
 elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_todo.path = '~/Dropbox/wiki/TODO'
+    let wiki_todo.path = '~/wiki/TODO'
 endif
 
 let wiki_pim = {}
 if g:os == "Windows"
     let wiki_pim.path = 'd:\Dropbox\wiki\pim'
 elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_pim.path = '~/Dropbox/wiki/pim'
+    let wiki_pim.path = '~/wiki/pim'
 endif
 
 let wiki_note = {}
 if g:os == "Windows"
     let wiki_note.path = 'd:\Dropbox\wiki\note'
 elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_note.path = '~/Dropbox/wiki/note'
+    let wiki_note.path = '~/wiki/note'
 endif
 
 let g:vimwiki_list = [wiki_todo, wiki_pim, wiki_note]
