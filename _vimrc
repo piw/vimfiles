@@ -1,41 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" # Manage Vim plugins using Pathogen and Git
-"
-" * Init
-"   git init ~/.vim
-"   mkdir ~/.vim/bundle
-"
-" * Install pathogen
-"   cd ~/.vim
-"   git submodule add https://github.com/tpope/vim-pathogen bundle/pathogen
-"   ln -s bundle/pathogen/autoload autoload
-"
-" * Add following lines to vimrc:
-"   call pathogen#infect()
-"   call pathogen#helptags()
-"
-" * Install plugins
-"   git submodule add https://github.com/tpope/vim-sensible bundle/vim-sensible
-"
-" * Update plugins
-"   git submodule update --remote --merge
-"
-" * Delete plugins
-"   git submodule deinit bundle/vim-sensible
-"   git rm bundle/vim-sensible
-"   rm -Rf .git/modules/bundle/vim-sensible
-"   git commit
-"
-" * Initialize submodules (on new machine)
-"   git submodule update --init --recursive (at root repo)
-"
-" # Recommended Font: Noto Mono
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call pathogen#infect()
-call pathogen#helptags()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [OS Detection]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if !exists("g:os")
@@ -54,10 +17,10 @@ set nocompatible
 set nobackup
 set fileformats=unix,dos
 set fileformat=unix
-set textwidth=88
+set textwidth=80
 set linebreak
 set wrap
-set wrapmargin=88
+set wrapmargin=80
 set nolist
 set tabstop=4
 set shiftwidth=4
@@ -75,7 +38,7 @@ colorscheme default
 if has("gui_running")
     set guioptions-=T
     colorscheme base16-harmonic-dark
-    if g:os == "Windows"
+    if     g:os == "Windows"
         set guifont=Noto_Mono:h12
     elseif g:os == "Darwin"
         set guifont=Noto\ Mono:h11
@@ -135,6 +98,13 @@ map <leader>sa zg  " add new word
 map <leader>s? z=  " suggest word
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Optional Plugins]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if g:os == "Darwin"
+    packadd dash-vim
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Indent-Guides]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1
@@ -168,5 +138,30 @@ let g:vimwiki_list = [wiki_todo, wiki_pim, wiki_note]
 let g:vimwiki_folding = 'expr'
 let g:vimwiki_table_mappings = 0
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" # Manage plugins using Vim8 package manager
+"
+" * Install plugins (autostart)
+"   cd ~/.vim
+"   git submodule add https://github.com/tpope/vim-sensible pack/plugins/start/vim-sensible
+"
+" * Install plugins (optionally start)
+"   cd ~/.vim
+"   git submodule add https://github.com/tpope/vim-sensible pack/plugins/opt/vim-sensible
+"
+" * Update plugins
+"   git submodule update --remote --merge
+"
+" * Delete plugins
+"   git submodule deinit pack/plugins/start/vim-sensible
+"   git rm pack/plugins/start/vim-sensible
+"   rm -Rf .git/modules/pack/plugins/start/vim-sensible
+"   git commit
+"
+" * Initialize submodules (on new machine)
+"   git submodule update --init --recursive (at root repo)
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vim: set syntax=vim:

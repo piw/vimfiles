@@ -1,30 +1,30 @@
-[submodule "bundle/pathogen"]
-	path = bundle/pathogen
-	url = https://github.com/tpope/vim-pathogen
-[submodule "bundle/vim-sensible"]
-	path = bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible
-[submodule "bundle/base16-vim"]
-	path = bundle/base16-vim
+[submodule "pack/plugins/start/base16-vim"]
+	path = pack/plugins/start/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
-[submodule "bundle/vim-indent-guides"]
-	path = bundle/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "bundle/lightline"]
-	path = bundle/lightline
-	url = https://github.com/itchyny/lightline.vim
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/vim-trailing-whitespace"]
-	path = bundle/vim-trailing-whitespace
-	url = https://github.com/bronson/vim-trailing-whitespace.git
-[submodule "bundle/vimwiki"]
-	path = bundle/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
+[submodule "pack/plugins/start/vim-indent-guides"]
+	path = pack/plugins/start/vim-indent-guides
+	url = git@github.com:nathanaelkane/vim-indent-guides
+[submodule "pack/plugins/start/lightline"]
+	path = pack/plugins/start/lightline
+	url = git@github.com:itchyny/lightline.vim
+[submodule "pack/plugins/start/supertab"]
+	path = pack/plugins/start/supertab
+	url = git@github.com:ervandew/supertab
+[submodule "pack/plugins/start/vim-surround"]
+	path = pack/plugins/start/vim-surround
+	url = git@github.com:tpope/vim-surround
+[submodule "pack/plugins/start/tabular"]
+	path = pack/plugins/start/tabular
+	url = git@github.com:godlygeek/tabular
+[submodule "pack/plugins/start/vim-sensible"]
+	path = pack/plugins/start/vim-sensible
+	url = git@github.com:tpope/vim-sensible
+[submodule "pack/plugins/start/vim-trailing-whitespace"]
+	path = pack/plugins/start/vim-trailing-whitespace
+	url = git@github.com:bronson/vim-trailing-whitespace
+[submodule "pack/plugins/start/vimwiki"]
+	path = pack/plugins/start/vimwiki
+	url = git@github.com:vimwiki/vimwiki
+[submodule "pack/plugins/opt/dash-vim"]
+	path = pack/plugins/opt/dash-vim
+	url = git@github.com:rizzatti/dash.vim
