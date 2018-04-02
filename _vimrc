@@ -32,12 +32,13 @@ set relativenumber
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [User Interface]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark
 colorscheme default
+set background=dark
 
 if has("gui_running")
     set guioptions-=T
     colorscheme base16-harmonic-dark
+    set background=light
     if     g:os == "Windows"
         set guifont=Noto_Mono:h12
     elseif g:os == "Darwin"
@@ -49,20 +50,6 @@ endif
 
 " mark the right margin
 set colorcolumn=+1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" [Chinese]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set fileencoding=utf-8
-set encoding=utf-8
-set formatoptions+=BmM  " better line wrap/break for CJK wide-char
-
-" Convert and save current buffer to utf-8 encoding
-map <leader>v :w ++enc=utf-8 %<enter>
-
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>dm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Custom Shortcuts]
@@ -96,6 +83,20 @@ map <leader>sn ]s  " move to next
 map <leader>sp [s  " move to last
 map <leader>sa zg  " add new word
 map <leader>s? z=  " suggest word
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Chinese]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fileencoding=utf-8
+set encoding=utf-8
+set formatoptions+=BmM  " better line wrap/break for CJK wide-char
+
+" Convert and save current buffer to utf-8 encoding
+map <leader>v :w ++enc=utf-8 %<enter>
+
+" Remove the Windows ^M - when the encodings gets messed up
+noremap <Leader>dm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Optional Plugins]
@@ -138,17 +139,19 @@ let g:vimwiki_list = [wiki_todo, wiki_pim, wiki_note]
 let g:vimwiki_folding = 'expr'
 let g:vimwiki_table_mappings = 0
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " # Manage plugins using Vim8 package manager
 "
 " * Install plugins (autostart)
 "   cd ~/.vim
-"   git submodule add https://github.com/tpope/vim-sensible pack/plugins/start/vim-sensible
+"   git submodule add git@github.com:tpope/vim-sensible pack/plugins/start/vim-sensible
 "
 " * Install plugins (optionally start)
 "   cd ~/.vim
-"   git submodule add https://github.com/tpope/vim-sensible pack/plugins/opt/vim-sensible
+"   git submodule add git@github.com:tpope/vim-sensible pack/plugins/opt/vim-sensible
+"
+" * Initialize submodules (on new machine)
+"   git submodule update --init --recursive (at root repo)
 "
 " * Update plugins
 "   git submodule update --remote --merge
@@ -159,9 +162,7 @@ let g:vimwiki_table_mappings = 0
 "   rm -Rf .git/modules/pack/plugins/start/vim-sensible
 "   git commit
 "
-" * Initialize submodules (on new machine)
-"   git submodule update --init --recursive (at root repo)
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " vim: set syntax=vim:
