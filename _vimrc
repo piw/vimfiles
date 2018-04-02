@@ -28,6 +28,7 @@ set expandtab
 set foldenable
 set foldlevelstart=99
 set relativenumber
+let g:netrw_dirhistmax = 0  "disable `.netrwhist`
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [User Interface]
