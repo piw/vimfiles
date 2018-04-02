@@ -25,6 +25,3 @@
 [submodule "pack/plugins/start/vimwiki"]
 	path = pack/plugins/start/vimwiki
 	url = git@github.com:vimwiki/vimwiki
-[submodule "pack/plugins/opt/dash-vim"]
-	path = pack/plugins/opt/dash-vim
-	url = git@github.com:rizzatti/dash.vim
