@@ -4,9 +4,6 @@
 [submodule "pack/plugins/start/vim-indent-guides"]
 	path = pack/plugins/start/vim-indent-guides
 	url = git@github.com:nathanaelkane/vim-indent-guides
-[submodule "pack/plugins/start/lightline"]
-	path = pack/plugins/start/lightline
-	url = git@github.com:itchyny/lightline.vim
 [submodule "pack/plugins/start/supertab"]
 	path = pack/plugins/start/supertab
 	url = git@github.com:ervandew/supertab
@@ -25,3 +22,6 @@
 [submodule "pack/plugins/start/vimwiki"]
 	path = pack/plugins/start/vimwiki
 	url = git@github.com:vimwiki/vimwiki
+[submodule "pack/plugins/start/vim-airline"]
+	path = pack/plugins/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline
