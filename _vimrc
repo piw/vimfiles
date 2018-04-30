@@ -28,6 +28,7 @@ set expandtab
 set foldenable
 set foldlevelstart=99
 set relativenumber
+set cursorline
 let g:netrw_dirhistmax = 0  "disable `.netrwhist`
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -43,7 +44,7 @@ if has("gui_running")
     if     g:os == "Windows"
         set guifont=Noto_Mono:h12
     elseif g:os == "Darwin"
-        set guifont=Noto\ Mono:h11
+        set guifont=Fura\ Code\ Light\ Nerd\ Font\ Complete:h12
     elseif g:os == "Linux"
         set guifont=Noto\ Mono\ 10
     endif
