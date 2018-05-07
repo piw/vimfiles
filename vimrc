@@ -104,6 +104,7 @@ noremap <Leader>dm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " [Plugin: Indent-Guides]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Vimwiki]
@@ -112,21 +113,21 @@ let wiki_todo = {}
 if g:os == "Windows"
     let wiki_todo.path = 'd:\Dropbox\wiki\TODO'
 elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_todo.path = '~/wiki/TODO'
+    let wiki_todo.path = '~/Documents/Drive/wiki/todo'
 endif
 
 let wiki_pim = {}
 if g:os == "Windows"
     let wiki_pim.path = 'd:\Dropbox\wiki\pim'
 elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_pim.path = '~/wiki/pim'
+    let wiki_pim.path = '~/Documents/Drive/wiki/pim'
 endif
 
 let wiki_note = {}
 if g:os == "Windows"
     let wiki_note.path = 'd:\Dropbox\wiki\note'
 elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_note.path = '~/wiki/note'
+    let wiki_note.path = '~/Documents/Drive/wiki/note'
 endif
 
 let g:vimwiki_list = [wiki_todo, wiki_pim, wiki_note]
@@ -135,29 +136,10 @@ let g:vimwiki_folding = 'expr'
 let g:vimwiki_table_mappings = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" # Manage plugins using Vim8 package manager
-"
-" * Install plugins (autostart)
-"   cd ~/.vim
-"   git submodule add git@github.com:tpope/vim-sensible pack/plugins/start/vim-sensible
-"
-" * Install plugins (optionally start)
-"   cd ~/.vim
-"   git submodule add git@github.com:tpope/vim-sensible pack/plugins/opt/vim-sensible
-"
-" * Initialize submodules (on new machine)
-"   git submodule update --init --recursive (at root repo)
-"
-" * Update plugins
-"   git submodule update --remote --merge
-"
-" * Delete plugins
-"   git submodule deinit pack/plugins/start/vim-sensible
-"   git rm pack/plugins/start/vim-sensible
-"   rm -Rf .git/modules/pack/plugins/start/vim-sensible
-"   git commit
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Plugin: Python-mode]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pymode_python = 'python3'
+
 
 
 " vim: set syntax=vim:

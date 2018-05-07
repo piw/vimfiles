@@ -25,3 +25,6 @@
 [submodule "pack/plugins/start/vim-airline"]
 	path = pack/plugins/start/vim-airline
 	url = git@github.com:vim-airline/vim-airline
+[submodule "pack/plugins/start/python-mode"]
+	path = pack/plugins/start/python-mode
+	url = git@github.com:python-mode/python-mode
