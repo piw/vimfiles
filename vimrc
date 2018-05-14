@@ -42,7 +42,7 @@ if has("gui_running")
     colorscheme base16-harmonic-dark
     set background=light
     if     g:os == "Windows"
-        set guifont=Noto_Mono:h12
+        set guifont=Noto_Mono:h11
     elseif g:os == "Darwin"
         set guifont=Fura\ Code\ Light\ Nerd\ Font\ Complete:h14
     elseif g:os == "Linux"
@@ -138,6 +138,10 @@ let g:vimwiki_table_mappings = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Python-mode]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if g:os == "Windows"
+    set pythonthreedll=C:\Users\phe01\AppData\Local\Programs\Python\Python36\python36.dll
+endif
+
 let g:pymode_python = 'python3'
 let g:pymode_folding = 0
 
