@@ -44,7 +44,7 @@ if has("gui_running")
     if     g:os == "Windows"
         set guifont=Noto_Mono:h12
     elseif g:os == "Darwin"
-        set guifont=Fura\ Code\ Light\ Nerd\ Font\ Complete:h12
+        set guifont=Fura\ Code\ Light\ Nerd\ Font\ Complete:h14
     elseif g:os == "Linux"
         set guifont=Noto\ Mono\ 10
     endif
@@ -139,6 +139,7 @@ let g:vimwiki_table_mappings = 0
 " [Plugin: Python-mode]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:pymode_python = 'python3'
+let g:pymode_folding = 0
 
 
 
