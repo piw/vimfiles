@@ -22,9 +22,6 @@
 [submodule "pack/plugins/start/vimwiki"]
 	path = pack/plugins/start/vimwiki
 	url = git@github.com:vimwiki/vimwiki
-[submodule "pack/plugins/start/vim-airline"]
-	path = pack/plugins/start/vim-airline
-	url = git@github.com:vim-airline/vim-airline
 [submodule "pack/plugins/start/vim-virtualenv"]
 	path = pack/plugins/start/vim-virtualenv
 	url = git@github.com:plytophogy/vim-virtualenv
