@@ -145,6 +145,13 @@ endif
 let g:pymode_python = 'python3'
 let g:pymode_folding = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Plugin: Powerline]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
 
 
 " vim: set syntax=vim:
