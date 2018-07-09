@@ -34,17 +34,17 @@ let g:netrw_dirhistmax = 0  "disable `.netrwhist`
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [User Interface]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme default
+colorscheme base16-classic-dark
+" colorscheme base16-tomorrow-night
 set background=dark
 
 if has("gui_running")
     set guioptions-=T
-    colorscheme base16-harmonic-dark
     set background=light
     if     g:os == "Windows"
         set guifont=Noto_Mono:h11
     elseif g:os == "Darwin"
-        set guifont=Fura\ Code\ Light\ Nerd\ Font\ Complete:h14
+        set guifont=CamingoCode\ Regular\ Nerd\ Font:h12
     elseif g:os == "Linux"
         set guifont=Noto\ Mono\ 10
     endif
@@ -107,51 +107,12 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" [Plugin: Vimwiki]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let wiki_todo = {}
-if g:os == "Windows"
-    let wiki_todo.path = 'd:\Dropbox\wiki\TODO'
-elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_todo.path = '~/Documents/Drive/wiki/todo'
-endif
-
-let wiki_pim = {}
-if g:os == "Windows"
-    let wiki_pim.path = 'd:\Dropbox\wiki\pim'
-elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_pim.path = '~/Documents/Drive/wiki/pim'
-endif
-
-let wiki_note = {}
-if g:os == "Windows"
-    let wiki_note.path = 'd:\Dropbox\wiki\note'
-elseif g:os == "Darwin" || g:os == "Linux"
-    let wiki_note.path = '~/Documents/Drive/wiki/note'
-endif
-
-let g:vimwiki_list = [wiki_todo, wiki_pim, wiki_note]
-
-let g:vimwiki_folding = 'expr'
-let g:vimwiki_table_mappings = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" [Plugin: Python-mode]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if g:os == "Windows"
-    set pythonthreedll=C:\Users\phe01\AppData\Local\Programs\Python\Python36\python36.dll
-endif
-
-let g:pymode_python = 'python3'
-let g:pymode_folding = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Powerline]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if g:os == "Darwin"
-    python3 from powerline.vim import setup as powerline_setup
-    python3 powerline_setup()
-    python3 del powerline_setup
+    python from powerline.vim import setup as powerline_setup
+    python powerline_setup()
+    python del powerline_setup
 endif
 
 
