@@ -44,7 +44,7 @@ if has("gui_running")
     if     g:os == "Windows"
         set guifont=Noto_Mono:h11
     elseif g:os == "Darwin"
-        set guifont=CamingoCode\ Regular\ Nerd\ Font:h12
+        set guifont=Operator\ Mono\ Light:h12
     elseif g:os == "Linux"
         set guifont=Noto\ Mono\ 10
     endif
@@ -116,11 +116,11 @@ let g:indent_guides_guide_size = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Powerline]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if g:os == "Darwin"
-    python from powerline.vim import setup as powerline_setup
-    python powerline_setup()
-    python del powerline_setup
-endif
+" if g:os == "Darwin"
+"     python from powerline.vim import setup as powerline_setup
+"     python powerline_setup()
+"     python del powerline_setup
+" endif
 
 
 
