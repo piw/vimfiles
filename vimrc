@@ -41,8 +41,7 @@ let g:netrw_dirhistmax = 0  "disable `.netrwhist`
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [User Interface]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme base16-classic-dark
-" colorscheme base16-tomorrow-night
+colorscheme ir_black
 set background=dark
 
 if has("gui_running")
@@ -51,7 +50,7 @@ if has("gui_running")
     if     g:os == "Windows"
         set guifont=Noto_Mono:h11
     elseif g:os == "Darwin"
-        set guifont=CamingoCode\ Regular\ Nerd\ Font:h12
+        set guifont=Operator\ Mono\ Light:h12
     elseif g:os == "Linux"
         set guifont=Noto\ Mono\ 10
     endif
@@ -123,11 +122,11 @@ let g:indent_guides_guide_size = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Powerline]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if g:os == "Darwin"
-    python3 from powerline.vim import setup as powerline_setup
-    python3 powerline_setup()
-    python3 del powerline_setup
-endif
+" if g:os == "Darwin"
+"     python from powerline.vim import setup as powerline_setup
+"     python powerline_setup()
+"     python del powerline_setup
+" endif
 
 
 
