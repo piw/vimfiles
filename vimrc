@@ -10,6 +10,13 @@ if !exists("g:os")
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Version Check & Pathogen]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if v:version < 800
+    execute pathogen#infect()
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [General]
 " most common options already set in sensible.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -17,10 +24,10 @@ set nocompatible
 set nobackup
 set fileformats=unix,dos
 set fileformat=unix
-set textwidth=80
+set textwidth=96
 set linebreak
 set wrap
-set wrapmargin=80
+set wrapmargin=96
 set nolist
 set tabstop=4
 set shiftwidth=4
