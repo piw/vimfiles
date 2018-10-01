@@ -34,8 +34,7 @@ let g:netrw_dirhistmax = 0  "disable `.netrwhist`
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [User Interface]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme base16-classic-dark
-" colorscheme base16-tomorrow-night
+colorscheme ir_black
 set background=dark
 
 if has("gui_running")
