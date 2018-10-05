@@ -46,7 +46,6 @@ set background=dark
 
 if has("gui_running")
     set guioptions-=T
-    set background=light
     if     g:os == "Windows"
         set guifont=Noto_Mono:h11
     elseif g:os == "Darwin"
