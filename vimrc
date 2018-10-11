@@ -113,6 +113,21 @@ map <leader>v :w ++enc=utf-8 %<enter>
 noremap <Leader>dm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" [Function: TwiddleCase]
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! TwiddleCase(str)
+  if a:str ==# toupper(a:str)
+    let result = tolower(a:str)
+  elseif a:str ==# tolower(a:str)
+    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
+  else
+    let result = toupper(a:str)
+  endif
+  return result
+endfunction
+vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Plugin: Indent-Guides]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1
