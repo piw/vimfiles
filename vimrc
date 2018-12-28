@@ -49,7 +49,7 @@ if has("gui_running")
     if     g:os == "Windows"
         set guifont=Noto_Mono:h11
     elseif g:os == "Darwin"
-        set guifont=Operator\ Mono\ Light:h12
+        set guifont=Operator\ Mono\ Light:h14
     elseif g:os == "Linux"
         set guifont=Noto\ Mono\ 10
     endif
