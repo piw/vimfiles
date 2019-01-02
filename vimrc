@@ -34,7 +34,7 @@ set shiftwidth=4
 set expandtab
 set foldenable
 set foldlevelstart=99
-set relativenumber
+" set relativenumber
 set cursorline
 let g:netrw_dirhistmax = 0  "disable `.netrwhist`
 
@@ -47,11 +47,11 @@ set background=dark
 if has("gui_running")
     set guioptions-=T
     if     g:os == "Windows"
-        set guifont=Noto_Mono:h11
+        set guifont=Ubuntu_Mono:h14
     elseif g:os == "Darwin"
-        set guifont=Operator\ Mono\ Light:h14
+        set guifont=Operator\ Mono\ NF\ Light:h14
     elseif g:os == "Linux"
-        set guifont=Noto\ Mono\ 10
+        set guifont=Ubuntu\ Mono\ 12
     endif
 endif
 
@@ -59,11 +59,11 @@ endif
 set colorcolumn=+1
 
 " change cursor shape in different modes (iTerm2 on OSX)
-if g:os == "Darwin"
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+" if g:os == "Darwin"
+"     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"     let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+"     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [Custom Shortcuts]
@@ -73,8 +73,7 @@ let g:mapleader=","
 
 " Quick saving/undo
 map <leader>x :w<enter>
-map <leader>q :redo<enter>
-map <leader>z :quit<enter>
+map <leader>z :redo<enter>
 
 " Switch to the directory of current open buffer
 map <leader>cd :cd %:p:h<enter>
@@ -89,7 +88,6 @@ xmap S :s//g<Left><Left>
 
 " Quickly escape to normal mode
 inoremap jj <Esc>
-inoremap jw <Esc>
 
 " Spell checking
 map <leader>ss :setlocal spell!<cr>  " toggle spell-checking
