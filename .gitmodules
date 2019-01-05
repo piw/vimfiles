@@ -22,3 +22,6 @@
 [submodule "pack/plugins/start/vim-virtualenv"]
 	path = pack/plugins/start/vim-virtualenv
 	url = git@github.com:plytophogy/vim-virtualenv
+[submodule "pack/plugins/start/vim-orgmode"]
+	path = pack/plugins/start/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
