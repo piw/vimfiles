@@ -28,3 +28,6 @@
 [submodule "pack/plugins/start/speeddating"]
 	path = pack/plugins/start/speeddating
 	url = https://tpope.io/vim/speeddating.git
+[submodule "pack/plugins/start/calendar-vim"]
+	path = pack/plugins/start/calendar-vim
+	url = https://github.com/mattn/calendar-vim.git
