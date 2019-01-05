@@ -31,3 +31,6 @@
 [submodule "pack/plugins/start/calendar-vim"]
 	path = pack/plugins/start/calendar-vim
 	url = https://github.com/mattn/calendar-vim.git
+[submodule "pack/plugins/start/tagbar"]
+	path = pack/plugins/start/tagbar
+	url = https://github.com/majutsushi/tagbar
